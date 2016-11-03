@@ -14,13 +14,29 @@ namespace HemmaKväll.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            fillAllMembers();
-            fillDroppdown();
+            if(!IsPostBack)
+            {
+                fillAllMembers();
+                fillDroppdown();
+            }
+    
         }
 
         private void fillDroppdown()
         {
-           //DropDownList1.DataSource
+            ListItem FistName = new ListItem("FistName", "1");
+            ListItem LastName = new ListItem("LastName", "2");
+            ListItem ID = new ListItem("ID", "3");
+            ListItem SSN = new ListItem("SSN", "4");
+            ListItem Phone = new ListItem("Phone", "5");
+
+
+            DropDownList1.Items.Add(FistName);
+            DropDownList1.Items.Add(LastName);
+            DropDownList1.Items.Add(ID);
+            DropDownList1.Items.Add(SSN);
+            DropDownList1.Items.Add(Phone);
+
         }
 
         private void fillAllMembers()
@@ -41,6 +57,11 @@ namespace HemmaKväll.Pages
         
 
             AllMembers.InnerHtml = sb.ToString();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            CRUD_Add_Search_Member.SearchOnMember(DropDownList1.SelectedValue);
         }
     }
 }

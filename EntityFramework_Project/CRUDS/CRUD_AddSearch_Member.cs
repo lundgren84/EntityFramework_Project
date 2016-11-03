@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityFramework_Project.CRUDS
 {
-   public class CRUD_Add_Search_Member
+    public class CRUD_Add_Search_Member
     {
         public static void NewMember(tbl_Member member)
         {
@@ -25,7 +25,37 @@ namespace EntityFramework_Project.CRUDS
             {
                 result = ctx.tbl_Member.ToList();
             }
-                return result;
+            return result;
+        }
+
+        public static List<tbl_Member> SearchOnMember(string selectedValue)
+        {
+            List<tbl_Member> result = new List<tbl_Member>();
+            using (var ctx =new HemmakvällEntities())
+            {
+                if (selectedValue == "1")
+                {
+                    //FirstName
+
+                }
+                else if (selectedValue == "2")
+                {
+                    //LastName
+                }
+                else if (selectedValue == "3")
+                {
+                    //ID
+                }
+                else if (selectedValue == "4")
+                {
+                    //SSN
+                }
+                else if (selectedValue == "5")
+                {
+                    //Phone
+                }
+            }
+            return result;
         }
     }
 }

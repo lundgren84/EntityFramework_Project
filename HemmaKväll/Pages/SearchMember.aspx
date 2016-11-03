@@ -11,7 +11,7 @@
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </div>
             <div class="col-xs-2">
-                <asp:Button ID="Button1" runat="server" Text="Search" />
+                <asp:Button ID="Button1" OnClick="Button1_Click" runat="server" Text="Search" />
             </div>
         </div>
 
