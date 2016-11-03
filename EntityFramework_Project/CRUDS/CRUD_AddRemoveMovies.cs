@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityFramework_Project.CRUDS
 {
-    class CRUD_AddMovies
+    public class CRUD_AddRemoveMovies
     {
         public static void AddMovie(tbl_Movie movie)
         {
