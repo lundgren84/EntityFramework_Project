@@ -12,7 +12,10 @@ namespace EntityFramework_Project.CRUDS
         {
             using (var ctx = new HemmakvällEntities())
             {
-                //ctx.tbl_HemmaKväll
+                movie.tbl_HemmaKväll = ctx.tbl_HemmaKväll.FirstOrDefault(x => x.Hemmakväll_ID == 1);
+                ctx.tbl_Movie.Add(movie);
+
+                ctx.SaveChanges();
             }
         }
     }
