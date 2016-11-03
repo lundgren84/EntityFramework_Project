@@ -2,6 +2,6 @@
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Remove member</h1>
-    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-    </asp:DropDownList>
+<asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+</asp:DropDownList>
 </asp:Content>
