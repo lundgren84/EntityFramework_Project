@@ -57,7 +57,7 @@
     <Compile Include="Application.cs" />
     <Compile Include="CRUD.cs" />
     <Compile Include="CRUDS\CRUD_AddMember.cs" />
-    <Compile Include="CRUDS\CRUD_AddMovies.cs" />
+    <Compile Include="CRUDS\CRUD_RemoveMember.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
