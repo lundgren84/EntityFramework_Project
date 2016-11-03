@@ -20,7 +20,7 @@ namespace HemmaKväll.Pages
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var memberlist = CRUD_AddSearch_Member.GetAllMembers();
+            var memberlist = CRUD_Add_Search_Member.GetAllMembers();
 
             DropDownList1.DataSource = from i in memberlist
                                        select new ListItem
