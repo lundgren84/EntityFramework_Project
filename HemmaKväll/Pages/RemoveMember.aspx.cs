@@ -14,12 +14,6 @@ namespace HemmaKväll.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
             var memberlist = CRUD_Add_Search_Member.GetAllMembers();
 
             DropDownList1.DataSource = from i in memberlist
@@ -29,6 +23,17 @@ namespace HemmaKväll.Pages
                                            Value = i.Member_ID.ToString()
                                        };
             DropDownList1.DataBind();
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+         
+        }
+
+        protected void remove_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
