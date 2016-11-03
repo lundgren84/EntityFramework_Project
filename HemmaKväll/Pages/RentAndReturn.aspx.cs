@@ -17,18 +17,21 @@ namespace HemmaKväll.Pages
                 TextBox1.Text = "3";
                 TextBox3.Text = "2";
             }
+            
         }
 
         protected void rent_Movie_Click(object sender, EventArgs e)
         {
-           
+            ActuallyRentTheFuckingMovie();
+            TextBox1.Text = "";
+            TextBox2.Text = "";
         }
 
         protected void return_Movie_Click(object sender, EventArgs e)
         {
 
         }
-        protected DateTime DetermineReturnDate()
+        protected void ActuallyRentTheFuckingMovie()
         {
             using (var ctx = new HemmakvällEntities())
             {
@@ -47,14 +50,26 @@ namespace HemmaKväll.Pages
                         movie.tbl_Member = member;
                         movie.Movie_Status = MovieStatus.Rented;
                         ctx.SaveChanges();
-                        return (DateTime)movie.Return_Date;
                     }
 
                 }
 
-                return new DateTime();
 
 
+
+            }
+        }
+        protected void ReturnTheFuckingMovie()
+        {
+            using (var ctx = new HemmakvällEntities())
+            {
+                var movie = ctx.tbl_Movie.Where(x => x.Movie_ID == int.Parse(TextBox3.Text)).FirstOrDefault();
+                if (movie != null)
+                {
+                    movie.tbl_Member = null;
+                    movie.Movie_Status = MovieStatus.InStore;
+                    ctx.SaveChanges();
+                }
             }
         }
     }
