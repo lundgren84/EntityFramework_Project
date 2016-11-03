@@ -18,6 +18,7 @@ namespace EntityFramework_Project
         public tbl_Member()
         {
             this.tbl_Movie = new HashSet<tbl_Movie>();
+            this.Status = MemberStatus.Open;          
         }
     
         public int Member_ID { get; set; }
