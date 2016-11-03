@@ -39,7 +39,13 @@ namespace HemmaKväll.Pages
         {
             string temp = DropDownList1.SelectedValue;;
 
-            CRUD_RemoveMember.RemoveMember(temp);
+            TextBox1.Text = CRUD_RemoveMember.RemoveMember(temp);
+            
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
