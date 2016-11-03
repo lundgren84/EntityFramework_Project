@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Pages\RentAndReturn.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
@@ -148,6 +149,13 @@
     </Compile>
     <Compile Include="Pages\RemoveMovie.aspx.designer.cs">
       <DependentUpon>RemoveMovie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RentAndReturn.aspx.cs">
+      <DependentUpon>RentAndReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RentAndReturn.aspx.designer.cs">
+      <DependentUpon>RentAndReturn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SearchMember.aspx.cs">
       <DependentUpon>SearchMember.aspx</DependentUpon>

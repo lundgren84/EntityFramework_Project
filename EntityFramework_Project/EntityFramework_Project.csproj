@@ -59,6 +59,7 @@
     <Compile Include="CRUDS\CRUD_AddSearch_Member.cs" />
     <Compile Include="CRUDS\CRUD_AddRemoveMovies.cs" />
     <Compile Include="CRUDS\CRUD_RemoveMember.cs" />
+    <Compile Include="CRUDS\CRUD_UpdateMovieWithRenter.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
