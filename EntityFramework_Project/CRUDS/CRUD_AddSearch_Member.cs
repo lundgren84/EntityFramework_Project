@@ -47,17 +47,17 @@ namespace EntityFramework_Project.CRUDS
                 else if (selectedValue == "3")
                 {
                     //ID
-                    result = ctx.tbl_Member.Where(x => x.Member_ID.Equals(searchValue)).ToList();
+                    result = ctx.tbl_Member.Where(x => x.Member_ID.Equals(searchValue.ToString())).ToList();
                 }
                 else if (selectedValue == "4")
                 {
                     //SSN
-                    result = ctx.tbl_Member.Where(x => x.CSN.StartsWith(searchValue)).ToList();
+                    result = ctx.tbl_Member.Where(x => x.CSN.StartsWith(searchValue.ToString())).ToList();
                 }
                 else if (selectedValue == "5")
                 {
                     //Phone
-                    result = ctx.tbl_Member.Where(x => x.PhoneNumber.StartsWith(searchValue)).ToList();
+                    result = ctx.tbl_Member.Where(x => x.PhoneNumber.StartsWith(searchValue.ToString())).ToList();
                 }
             }
             return result;
