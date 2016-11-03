@@ -2,9 +2,13 @@
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Search member</h1>
-    <div class="container" runat="server" id="AllMembers">
-          <div class="row">
-              
-          </div>
+    <div class="container">
+        <div runat="server" id="AllMembers">
+            <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-1"></div>   
+                </div>     
+        </div>
     </div>
 </asp:Content>

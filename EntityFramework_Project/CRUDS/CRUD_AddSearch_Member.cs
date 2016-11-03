@@ -17,5 +17,15 @@ namespace EntityFramework_Project.CRUDS
                 ctx.SaveChanges();
             }
         }
+
+        public static List<tbl_Member> GetAllMembers()
+        {
+            List<tbl_Member> result = new List<tbl_Member>();
+            using (var ctx = new HemmakvällEntities())
+            {
+                result = ctx.tbl_Member.ToList();
+            }
+                return result;
+        }
     }
 }
