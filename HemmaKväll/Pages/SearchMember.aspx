@@ -14,7 +14,11 @@
                 <asp:Button ID="Button1" OnClick="Button1_Click" runat="server" Text="Search" />
             </div>
         </div>
-
+        <asp:Panel ID="PanelSearch" runat="server">
+            <h2>Search Result</h2>
+            <div runat="server" id="SearchMembers">
+            </div>
+        </asp:Panel>
         <h2>All Members</h2>
         <div runat="server" id="AllMembers">
             <div class="row">

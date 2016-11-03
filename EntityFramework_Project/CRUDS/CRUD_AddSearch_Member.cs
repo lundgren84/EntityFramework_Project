@@ -28,7 +28,7 @@ namespace EntityFramework_Project.CRUDS
             return result;
         }
 
-        public static List<tbl_Member> SearchOnMember(string selectedValue)
+        public static List<tbl_Member> SearchOnMember(string selectedValue,string searchValue)
         {
             List<tbl_Member> result = new List<tbl_Member>();
             using (var ctx =new HemmakvällEntities())
@@ -36,23 +36,27 @@ namespace EntityFramework_Project.CRUDS
                 if (selectedValue == "1")
                 {
                     //FirstName
-
+                    result = ctx.tbl_Member.Where(x=> x.FirstName.ToLower().StartsWith(searchValue)).ToList();
                 }
                 else if (selectedValue == "2")
                 {
                     //LastName
+                    result = ctx.tbl_Member.Where(x => x.LastName.ToLower().StartsWith(searchValue)).ToList();
                 }
                 else if (selectedValue == "3")
                 {
                     //ID
+                    result = ctx.tbl_Member.Where(x => x.Member_ID.Equals(searchValue)).ToList();
                 }
                 else if (selectedValue == "4")
                 {
                     //SSN
+                    result = ctx.tbl_Member.Where(x => x.CSN.StartsWith(searchValue)).ToList();
                 }
                 else if (selectedValue == "5")
                 {
                     //Phone
+                    result = ctx.tbl_Member.Where(x => x.PhoneNumber.StartsWith(searchValue)).ToList();
                 }
             }
             return result;

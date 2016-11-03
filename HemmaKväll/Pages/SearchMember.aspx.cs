@@ -16,6 +16,7 @@ namespace HemmaKväll.Pages
         {
             if(!IsPostBack)
             {
+                PanelSearch.Visible = false;
                 fillAllMembers();
                 fillDroppdown();
             }
@@ -61,7 +62,32 @@ namespace HemmaKväll.Pages
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            CRUD_Add_Search_Member.SearchOnMember(DropDownList1.SelectedValue);
+          var SearchList =  CRUD_Add_Search_Member.SearchOnMember(DropDownList1.SelectedValue,TextBox1.Text.ToLower());
+            if(SearchList != null)
+            {
+                PanelSearch.Visible = true;
+                FillAllMembersSearchValues(SearchList);
+            }
+            else
+            {
+                PanelSearch.Visible = false;
+            }
+        }
+
+        private void FillAllMembersSearchValues(List<tbl_Member> SearchList)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in SearchList)
+            {
+                sb.Append($@"     <div class='row'>
+                <div class='col-xs-2'>ID: {item.Member_ID}</div>
+                <div class='col-xs-2'>{item.LastName}. {item.FirstName}</div>
+                <div class='col-xs-2'>SSN: {item.CSN}</div>
+                <div class='col-xs-2'>Phone: {item.PhoneNumber}</div>
+                <hr/>
+            </div>");
+            }
+            SearchMembers.InnerHtml = sb.ToString();
         }
     }
 }
