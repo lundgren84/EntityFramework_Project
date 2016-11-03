@@ -12,7 +12,7 @@
         
         <%-- genre --%>
         <div class="col-xs-1">
-            <asp:Label ID="genreLbl" CssClass="label" AssociatedControlID="genreDropDown" runat="server" Text="Title"></asp:Label>
+            <asp:Label ID="genreLbl" CssClass="label" AssociatedControlID="genreDropDown" runat="server" Text="Genre"></asp:Label>
         </div>
         <div class="col-xs-2">
             <asp:DropDownList ID="genreDropDown" runat="server"></asp:DropDownList>
@@ -20,7 +20,7 @@
         
         <%-- Length --%>
         <div class="col-xs-1">
-            <asp:Label ID="lengthLbl" CssClass="label" AssociatedControlID="lengthTxtBox" runat="server" Text="Title"></asp:Label>
+            <asp:Label ID="lengthLbl" CssClass="label" AssociatedControlID="lengthTxtBox" runat="server" Text="Length"></asp:Label>
         </div>
         <div class="col-xs-2">
             <asp:TextBox ID="lengthTxtBox" CssClass="form-control" runat="server"></asp:TextBox>

@@ -32,6 +32,8 @@ namespace HemmaKväll.Pages
             movie.Movie_Status = MovieStatus.InStore;
 
             CRUD_AddRemoveMovies.AddMovie(movie);
+
+            Response.Redirect("../default.aspx");
         }
     }
 }
