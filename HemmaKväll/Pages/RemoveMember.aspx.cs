@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityFramework_Project;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,14 @@ namespace HemmaKväll.Pages
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            var memberlist = new List<tbl_Member>();
+            DropDownList1.DataSource = from i in memberlist
+                                       select new ListItem
+                                       {
+                                           Text = i.FirstName + " " + i.LastName,
+                                           Value = i.Member_ID.ToString()
+                                       };
+            DropDownList1.DataBind();
         }
     }
 }
