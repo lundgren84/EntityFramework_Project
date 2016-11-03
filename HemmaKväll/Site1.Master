@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HemmaKväll.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <nav class="navbar  navbar-default navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header ">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/default.aspx">HEMMAKVÄLL</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <%-- Film DropDown --%>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="~/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Movies <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Pages/AddMovie.aspx">Add new Movies</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a runat="server" href="~/Pages/RemoveMovie.aspx">Remove Movie</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a runat="server" href="~/Pages/SearchMovie.aspx">Search on Movie</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <%--   //Member Dropdown--%>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="~/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Members <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Pages/AddMember.aspx">Add new Member</a></li>
+                                  <li role="separator" class="divider"></li>
+                                <li><a runat="server" href="~/Pages/RemoveMember.aspx">Remove Member</a></li>
+                                  <li role="separator" class="divider"></li>
+                                <li><a runat="server" href="~/Pages/SearchMember.aspx">Search on Member</a></li>                                
+                           
+                            </ul>
+                        </li>
+                    </ul>
+                    <%-- END --%>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <form id="form1" runat="server">
+        <div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
