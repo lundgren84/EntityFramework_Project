@@ -56,7 +56,7 @@
   <ItemGroup>
     <Compile Include="Application.cs" />
     <Compile Include="CRUD.cs" />
-    <Compile Include="CRUDS\CRUD_AddMember.cs" />
+    <Compile Include="CRUDS\CRUD_AddSearch_Member.cs" />
     <Compile Include="CRUDS\CRUD_AddMovies.cs" />
     <Compile Include="CRUDS\CRUD_RemoveMember.cs" />
     <Compile Include="Enums.cs" />
