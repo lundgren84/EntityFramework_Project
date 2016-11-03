@@ -5,10 +5,10 @@
     <div class="container">
         <div runat="server" id="AllMembers">
             <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-1"></div>
-            <div class="col-xs-1"></div>   
-                </div>     
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1"></div>
+            </div>
         </div>
     </div>
 </asp:Content>
