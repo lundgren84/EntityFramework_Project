@@ -29,15 +29,15 @@ namespace EntityFramework_Project.CRUDS
             return result;
         }
 
-        public static List<tbl_Member> SearchOnMember(string selectedValue,string searchValue)
+        public static List<tbl_Member> SearchOnMember(string selectedValue, string searchValue)
         {
             List<tbl_Member> result = new List<tbl_Member>();
-            using (var ctx =new HemmakvällEntities())
+            using (var ctx = new HemmakvällEntities())
             {
                 if (selectedValue == "1")
                 {
                     //FirstName
-                    result = ctx.tbl_Member.Where(x=> x.FirstName.ToLower().StartsWith(searchValue)).ToList();
+                    result = ctx.tbl_Member.Where(x => x.FirstName.ToLower().StartsWith(searchValue)).ToList();
                 }
                 else if (selectedValue == "2")
                 {
@@ -76,15 +76,36 @@ namespace EntityFramework_Project.CRUDS
                 }
             }
 
-                return result;
+            return result;
         }
 
         public static List<tbl_Movie> SearchOnMovies(string selectedValue1, string selectedValue2, string v)
         {
+            int genreInt = int.Parse(selectedValue2);
             List<tbl_Movie> result = new List<tbl_Movie>();
+            //Search type
+            if (selectedValue1 == "0") { }
+            //Genre
+            if (selectedValue2 == "0") { }
+            
+            using (var ctx = new HemmakvällEntities())
+            {
+                //Default
+                if (selectedValue1 == "0")
+                {
+               
+                }
+                //ID
+                if (selectedValue1 == "1")
+                {
 
+                }
+                //titel
+                if (selectedValue1 == "2")
+                {
 
-
+                }
+            }
 
             return result;
         }
