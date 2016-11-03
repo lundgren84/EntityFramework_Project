@@ -18,5 +18,26 @@ namespace EntityFramework_Project.CRUDS
                 ctx.SaveChanges();
             }
         }
+
+        public static void RemoveMovie(int id)
+        {
+            using (var ctx = new HemmakvällEntities())
+            {
+                var movie = ctx.tbl_Movie.FirstOrDefault(x => x.Movie_ID == id);
+                ctx.tbl_Movie.Remove(movie);
+
+                ctx.SaveChanges();
+            }
+        }
+
+        public static List<tbl_Movie> GetAllMovies()
+        {
+            var result = new List<tbl_Movie>();
+            using (var ctx = new HemmakvällEntities())
+            {
+                result = ctx.tbl_Movie.ToList();
+            }
+            return result;
+        }
     }
 }
