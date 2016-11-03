@@ -4,4 +4,5 @@
     <h1>Remove member</h1>
 <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
 </asp:DropDownList>
+    <asp:Button ID="remove_button" runat="server" OnClick="remove_button_Click" Text="Remove" />
 </asp:Content>
