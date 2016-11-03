@@ -14,17 +14,21 @@ namespace HemmaKväll.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+                   FillTheDropdown();
+        }
+        protected void FillTheDropdown()
+        {
             var memberlist = CRUD_Add_Search_Member.GetAllMembers();
 
             DropDownList1.DataSource = from i in memberlist
                                        select new ListItem
-                                       {
-                                           Text = i.FirstName + " " + i.LastName,
-                                           Value = i.Member_ID.ToString()
-                                       };
+                                       (
+                                           (i.FirstName + " " + i.LastName),
+                                           i.Member_ID.ToString()
+                                       );
             DropDownList1.DataBind();
         }
-
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -33,7 +37,9 @@ namespace HemmaKväll.Pages
 
         protected void remove_button_Click(object sender, EventArgs e)
         {
+            string temp = DropDownList1.SelectedValue;;
 
+            CRUD_RemoveMember.RemoveMember(temp);
         }
     }
 }
