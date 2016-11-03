@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EntityFramework_Project.CRUDS;
+
 
 namespace HemmaKväll.Pages
 {
@@ -18,7 +20,8 @@ namespace HemmaKväll.Pages
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var memberlist = new List<tbl_Member>();
+            var memberlist = CRUD_AddSearch_Member.GetAllMembers();
+
             DropDownList1.DataSource = from i in memberlist
                                        select new ListItem
                                        {
