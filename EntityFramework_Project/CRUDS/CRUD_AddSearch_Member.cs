@@ -62,5 +62,31 @@ namespace EntityFramework_Project.CRUDS
             }
             return result;
         }
+
+        public static List<tbl_Movie> GetAllMovies()
+        {
+            List<tbl_Movie> result = new List<tbl_Movie>();
+
+            using (var ctx = new HemmakvällEntities())
+            {
+                result = ctx.tbl_Movie.ToList();
+                foreach (var item in result)
+                {
+                    item.tbl_Member = ctx.tbl_Member.Where(x => x.Member_ID == item.Member_ID).FirstOrDefault();
+                }
+            }
+
+                return result;
+        }
+
+        public static List<tbl_Movie> SearchOnMovies(string selectedValue1, string selectedValue2, string v)
+        {
+            List<tbl_Movie> result = new List<tbl_Movie>();
+
+
+
+
+            return result;
+        }
     }
 }

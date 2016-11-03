@@ -124,7 +124,7 @@ namespace EntityFramework_Project
             return genre;
 
         }
-        private static List<T> GetEnumList<T>()
+        public static List<T> GetEnumList<T>()
         {
             var enumList = Enum.GetValues(typeof(T))
                 .Cast<T>().ToList();
