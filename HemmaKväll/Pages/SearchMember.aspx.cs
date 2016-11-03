@@ -37,7 +37,6 @@ namespace HemmaKväll.Pages
             DropDownList1.Items.Add(ID);
             DropDownList1.Items.Add(SSN);
             DropDownList1.Items.Add(Phone);
-
         }
 
         private void fillAllMembers()
