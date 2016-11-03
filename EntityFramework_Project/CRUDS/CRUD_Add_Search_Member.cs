@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityFramework_Project.CRUDS
 {
-   public class CRUD_AddMember
+   public class CRUD_Add_Search_Member
     {
         public static void NewMember(tbl_Member member)
         {

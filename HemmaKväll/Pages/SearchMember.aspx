@@ -2,4 +2,7 @@
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Search member</h1>
+    <div class="container">
+          
+    </div>
 </asp:Content>

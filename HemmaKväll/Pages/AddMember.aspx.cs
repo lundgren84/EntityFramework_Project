@@ -35,7 +35,7 @@ namespace HemmaKväll.Pages
             member.LastName = TextBox2.Text;
             member.PhoneNumber = TextBox3.Text;
             member.CSN = TextBox4.Text;
-            CRUD_AddMember.NewMember(member);
+            CRUD_Add_Search_Member.NewMember(member);
         }
     }
 }
